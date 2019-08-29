@@ -2,12 +2,12 @@ function birthdayCakeCandles(ar) {
 
   let largestNumber = 0,count = 0;
 
-  for (let i = 0; i < ar.length; i++){
+    for (let i = 0; i < ar.length; i++){
 
-      if(largestNumber < ar[i]){
-        largestNumber = ar[i];
-      }
-  }
+        if(largestNumber < ar[i]){
+          largestNumber = ar[i];
+        }
+    }
 
   for (let i = 0; i < ar.length; i++){
       if (largestNumber == ar[i]) {
