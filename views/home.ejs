@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <h1>Test</h1>
+
+
+
+  <button>Submit</button>
+
+
+  <a href = "/getPage">Get page</a>
+
+
+  <form enctype="multipart/form-data" method='POST' action ='/'>
+
+    <input type = 'file' name ='Upload-afile'>
+    <button>Upload File</button>
+
+  </form>
+
+
+  
+  Number 1 : <input class = "number" type = "number" name = "operandA" placeholder = "number">
+	Number 2 : <input class = "number" type = "number" name = "operandB" placeholder = "number">
+	
+  <button class="add">+</button>
+  <button class="add">-</button>
+  <button class="add">*</button>
+  <button class="add">/</button>
+  
+  <table class='names'>
+    <thead>
+      <tr> 
+          <th>Name</th>
+          <th>Last Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>ethan</td>
+        <td>hunt</td>
+
+      </tr>
+
+      <tr>
+        <td>shabaz</td>
+        <td>baig</td>
+      </tr>
+
+      <tr>
+          <td>dummy 1</td>
+          <td>dummy1</td>
+        </tr>
+
+        <tr>
+            <td>dummy 2</td>
+            <td>dummy 2</td>
+          </tr>
+    </tbody>
+  </table>
+
+  <div class = 'test'>
+    <p>dummy</p>
+    <p>something</p>
+  </div>
+
+
+  <div class = 'test'>
+    <p>test</p>
+  </div>
+  <script>
+  
+    document.querySelector('button').onclick = () => {
+      // console.log('hey I am clicked');
+
+      fetch('/test').then((result) => {
+        
+        console.log(result);
+        return result;
+
+      }).then((result) => {
+        
+        console.log(result.body);
+
+      });
+
+    }
+
+  </script>
+  <script src='/scripts/home.js'></script>
+</body>
+</html>

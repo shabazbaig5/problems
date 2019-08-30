@@ -25,8 +25,6 @@ function timeConversion(s) {
       console.log("hhghhg");
       return newTime;
 
-
-      
   } else if(s.substring(s.length - 2, s.length) == 'PM'){
       temp = parseInt(temp) + 12;
       newTime = temp + newTime.replace('PM', '').replace('AM', '');
