@@ -1,14 +1,25 @@
 const getConnection = require('../db/db.js');
 const http = require('http');
-
+const express = require('express');
+const app = express();
 const PORT = process.env.PORT || 4003;
 const os = require('os');
 
 console.log("Locked and loaded");
 
+
+app.set('view engine', 'ejs');
+
+app.use(express.static(__dirname + '/views'));
 // const numCPUs = os.cpus().length;
 
+app.get('/', (req, res) => {
+  res.render('home');
+});
 
+app.listen(PORT, () => {
+  console.log("Listening to " + PORT);
+})
 // let str = os.userInfo();
 
 // console.log(str);
