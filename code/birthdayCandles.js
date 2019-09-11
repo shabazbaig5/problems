@@ -15,6 +15,8 @@ function birthdayCakeCandles(ar) {
       }
   }
 
+
+  let sum =  callTheFUn(2,3);
   console.log("The largest number would be " + largestNumber);
   return count;
 
@@ -27,3 +29,11 @@ let arr = [82,49, 82, 82, 41, 82, 15, 63, 38, 25];
 let count = birthdayCakeCandles(arr);
 
 console.log(count);
+
+
+
+
+function callTheFUn (a ,b){
+  console.log(a+b);
+  return a+b;
+}
