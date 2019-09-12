@@ -1,22 +1,32 @@
-let num = 27;
-let div;
-let bin = [];
-while(num > 1){
+const process = require('process');
 
-  div = parseInt(num/2);
-  
-  if(num%2 == 0 || num%2==1){
-    bin.push(num%2);
+console.log('enter the number to change it into binary');
+
+process.stdin.on('data', (chunk) => {
+  console.log(chunk.toString());
+  let num = parseInt(chunk);
+  console.log(num);
+  let div;
+  let bin = [];
+  while(num > 1){
+
+    div = parseInt(num/2);
+    
+    if(num%2 == 0 || num%2==1){
+      bin.push(num%2);
+
+      
+      // console.log(num%2);
+    }
+
+    num = div;
 
     
-    // console.log(num%2);
+
+
   }
+  bin.push(1);
 
-  num = div;
-
-  
-
-
-}
-bin.push(1);
-console.log(bin);
+  bin = bin.reverse();
+  console.log(bin);
+});

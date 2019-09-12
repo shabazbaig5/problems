@@ -1,120 +1,107 @@
 
-let dynamicDivs = document.querySelector('.dynamicDivs');
+// let dynamicDivs = document.querySelector('.dynamicDivs');
 
-let div = dynamicDivs.querySelector('div');
+// let div = dynamicDivs.querySelector('div');
 
-console.log(div.childNodes);
+// console.log(div.childNodes);
 
-console.log(div);
-
-
-let addDivBtn = document.querySelector('.addDiv');
+// console.log(div);
 
 
+// let addDivBtn = document.querySelector('.addDiv');
 
 
-addDivBtn.addEventListener("click", (e) => {
 
 
-  let nextDiv = div.cloneNode(true);
+// addDivBtn.addEventListener("click", (e) => {
 
-  console.log("The next div is");
-  console.log(nextDiv);
-  let addBtn = nextDiv.querySelector('.addDiv');
 
-  // e.target.setAttribute("onclick", alert('hey'));
+//   let nextDiv = div.cloneNode(true);
 
-  addBtn.classList.add('addIt');
+//   console.log("The next div is");
+//   console.log(nextDiv);
+//   let addBtn = nextDiv.querySelector('.addDiv');
 
-  
+//   // e.target.setAttribute("onclick", alert('hey'));
+
+//   addBtn.classList.add('addIt');
 
   
-  dynamicDivs.appendChild(nextDiv);
+
+  
+//   dynamicDivs.appendChild(nextDiv);
 
 
-  // addBtn.setAttribute("onclick", alert("heyyy"));
+//   // addBtn.setAttribute("onclick", alert("heyyy"));
 
 
-  document.querySelectorAll('.dynamicDivs div').forEach((div) => {
+//   document.querySelectorAll('.dynamicDivs div').forEach((div) => {
 
-    console.log(div.querySelector('button'));
+//     console.log(div.querySelector('button'));
 
-    div.querySelector('button').addEventListener("click", () => {
-      console.log('hey clicked');
-      let nextDiv = div.cloneNode(true);
+//     div.querySelector('button').addEventListener("click", () => {
+//       console.log('hey clicked');
+//       let nextDiv = div.cloneNode(true);
 
-      console.log("The next div is");
-      console.log(nextDiv);
-      let addBtn = nextDiv.querySelector('.addDiv');
+//       console.log("The next div is");
+//       console.log(nextDiv);
+//       let addBtn = nextDiv.querySelector('.addDiv');
     
-      // e.target.setAttribute("onclick", alert('hey'));
+//       // e.target.setAttribute("onclick", alert('hey'));
     
-      addBtn.classList.add('addIt');
+//       addBtn.classList.add('addIt');
     
       
     
       
-      dynamicDivs.appendChild(nextDiv);
-      // console.log(e.target);
-      // addTheEvent();
+//       dynamicDivs.appendChild(nextDiv);
+//       // console.log(e.target);
+//       // addTheEvent();
 
-    })
+//     })
 
-  })
-  console.log(dynamicDivs);
+//   })
+//   console.log(dynamicDivs);
 
   
 
+
+// });
+
+
+// console.log(dynamicDivs.childNodes[1]);
+
+
+
+
+let parentDiv = document.querySelector('.dynamicDivs');
+
+console.log(parentDiv);
+console.log(parentDiv.querySelectorAll('div'));
+
+let divs = parentDiv.querySelectorAll('div');
+
+let lastDiv = divs[divs.length - 1];
+console.log(lastDiv.querySelector('button'));
+
+lastDiv.addEventListener("click", () => {
+
+  addTheDiv();
 
 });
 
+addTheDiv = () => {
 
-console.log(dynamicDivs.childNodes[1]);
+  console.log("Clicked the last one");
+  let nextDiv = document.createElement('div');
 
-// document.querySelectorAll('.dynamicDivs div button').forEach((btn) => {
+  nextDiv = lastDiv.cloneNode(true);
 
-//   console.log('clicked');
-//   btn.addEventListener("click" , (e) => {
+  parentDiv.appendChild(nextDiv);
 
-//     console.log('clicked');
 
-//     e.target.setAttribute("onclick", alert('hey'));
-//     let nextDiv = div.cloneNode(true);
-
-//     let addBtn = nextDiv.querySelector('.addDiv');
-  
-//     // addBtn.classList.add('addDiv');
-//     console.log(addBtn);
-  
-    
-//     dynamicDivs.appendChild(nextDiv);
-  
-//     console.log(dynamicDivs);
-  
-
-//   })
-// })
+}
 
 
 
-// ejs
 
-<div class = "dynamicDivs">
-
-<div>
-    <button class = 'addDiv' type='button' >+</button>
-
-    <textarea id=activity class='form-control' name=activity placeholder='add your activity here'></textarea>
-
-    <input type='text' id='cost' name='cost' class='form-control'>
-
-    <input type='text' id='ftecount' name='ftecount' class='form-control'>
-    <input type='text' id='count' name='count' class='form-control'>
-
-    <button type='button' id=delete"+i+">-</button>
-
-
-</div>
-
-  
-</div>
