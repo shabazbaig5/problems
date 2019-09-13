@@ -20,12 +20,22 @@ parentDiv.addEventListener('click', (e) => {
     console.log(e.target);
     console.log(addBtn);
 
-    addTheDiv();
+    if(divs.length<20){
+      addTheDiv();
+
+    }else{
+      console.log("Limit reached");
+      alert("limit reached");
+    }
 
   }else if(e.target == removeBtn){
 
     console.log("Clicked on the remove btn");
     console.log(removeBtn);
+
+    console.log(e.target.parentNode);
+
+    removeTheDiv(e.target);
 
   }
 });
@@ -37,11 +47,36 @@ parentDiv.addEventListener('click', (e) => {
 
 addTheDiv = () => {
 
+  let count = 0;
   let nextDiv = document.createElement('div');
+
+  
   nextDiv = lastDiv.cloneNode(true);
   parentDiv.appendChild(nextDiv);
   addBtn = nextDiv.querySelector('button');
-  console.log(addBtn)
+  removeBtn = nextDiv.childNodes[nextDiv.childNodes.length - 2];
+  // lastDiv = divs[divs.length - 1];
+  divs= parentDiv.querySelectorAll('div');
+  console.log(divs.length);
+
+  console.log(lastDiv);
+  // console.log(removeBtn);
+  // console.log(addBtn)
+
+}
+
+
+removeTheDiv = (div) => {
+
+  // let nextDiv = document.createElement('div');
+  let removableDiv = div.parentNode;
+  removableDiv.remove();
+  divs= parentDiv.querySelectorAll('div');
+  lastDiv = divs[divs.length - 1];
+  console.log(lastDiv)
+  removeBtn = lastDiv.childNodes[lastDiv.childNodes.length - 2];
+  console.log(removeBtn);
+  
 
 }
 
