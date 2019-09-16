@@ -4,13 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src = 'https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js'></script>
     <title>Document</title>
 </head>
 <body>
 
 
+    <input type='text', placeholder="enter the values" id = 'expression'>
+
 
         <div class = "dynamicDivs">
+            <!-- <div class = 'wrapperDiv'> -->
+                <div class="innerDiv row p-2">
+                    <div class='col-md-1' id=add_btn"+i+">
+                        <div class='md-form p-2' style='text-align:center'>
+                            <button class = 'btn_1' type='button'>+</button>
+                        </div>
+                    </div>
+                    <div class='col-md-3'> 
+                        <div class='md-form p-2'> 
+                            <textarea id=activity class='form-control' name=activity placeholder='add your activity here'></textarea> 
+                        </div> 
+                    </div>
+                    <div class='col-md-2'>
+                        <div class='md-form p-2'>
+                            <input type='number' min="1" id='cost' name='cost' class='form-control budget'>
+                        </div>
+                    </div>
+                    <div class='col-md-2'>
+                        <div class='md-form p-2'>
+                            <input type='number' min ="1" id='ftecount' name='ftecount' class='form-control expenses'>
+                        </div>
+                    </div>
+                    <div class='col-md-2'>
+                        <div class='md-form p-2'>
+                            <input type='number' min="1" id='count' name='count' class='form-control count'>
+                        </div>
+                    </div> 
+                    <div class='col-md-1'>
+                        <div class='md-form p-2' style='text-align:center'>
+                            <button type='button' class="delete" id=delete>-</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- </div> -->
+        </div>
+
+        <!-- <div class = "dynamicDivs">
         
             <div>
 
@@ -18,14 +62,30 @@
             
                 <textarea id=activity class='form-control' name=activity placeholder='add your activity here'></textarea>
             
-                <input type='text' id='cost' name='cost' class='form-control'>
+                <input type='number' min = '1' id='cost' name='cost' class='form-control budget'>
             
-                <input type='text' id='ftecount' name='ftecount' class='form-control'>
-                <input type='text' id='count' name='count' class='form-control'>
+                <input type='number' min = '1' id='ftecount' name='ftecount' class='form-control expenses'>
+                <input type='numebr' min='1' id='count' name='count' class='form-control count'>
             
                 <button type='button' class=delete>-</button>
             
-            </div>
+            </div> -->
+
+            <!-- <div>
+
+                    <button class = 'btn_1' type='button' >+</button>
+                
+                    <textarea id=activity class='form-control' name=activity placeholder='add your activity here'></textarea>
+                
+                    <input type='text' id='cost' name='cost' class='form-control'>
+                
+                    <input type='text' id='ftecount' name='ftecount' class='form-control expenses'>
+                    <input type='text' id='count' name='count' class='form-control'>
+                
+                    <button type='button' class=delete>-</button>
+                
+                </div> -->
+            
         
         </div>
     
